@@ -14,7 +14,7 @@
  *     ascii code of base64 character. If byte is >= 64, then there is not corresponding base64 character
  *     and 255 is returned
  */
-unsigned char binary_to_base64(unsigned char v);
+static unsigned char binary_to_base64(unsigned char v);
 
 /* base64_to_binary:
  *   Description:
@@ -24,7 +24,7 @@ unsigned char binary_to_base64(unsigned char v);
  *   Returns:
  *     6-bit binary value
  */
-unsigned char base64_to_binary(unsigned char c);
+static unsigned char base64_to_binary(unsigned char c);
 
 /* encode_base64_length:
  *   Description:
@@ -34,7 +34,7 @@ unsigned char base64_to_binary(unsigned char c);
  *   Returns:
  *     Number of base64 characters needed to encode input_length bytes of binary data
  */
-unsigned int encode_base64_length(unsigned int input_length);
+static unsigned int encode_base64_length(unsigned int input_length);
 
 /* decode_base64_length:
  *   Description:
@@ -46,8 +46,8 @@ unsigned int encode_base64_length(unsigned int input_length);
  *   Returns:
  *     Number of bytes of binary data in input
  */
-unsigned int decode_base64_length(unsigned char input[]);
-unsigned int decode_base64_length(unsigned char input[], unsigned int input_length);
+static unsigned int decode_base64_length(unsigned char input[]);
+static unsigned int decode_base64_length(unsigned char input[], unsigned int input_length);
 
 /* encode_base64:
  *   Description:
@@ -59,7 +59,7 @@ unsigned int decode_base64_length(unsigned char input[], unsigned int input_leng
  *   Returns:
  *     Length of encoded string in bytes (not including null terminator)
  */
-unsigned int encode_base64(unsigned char input[], unsigned int input_length, unsigned char output[]);
+static unsigned int encode_base64(unsigned char input[], unsigned int input_length, unsigned char output[]);
 
 /* decode_base64:
  *   Description:
@@ -71,8 +71,8 @@ unsigned int encode_base64(unsigned char input[], unsigned int input_length, uns
  *   Returns:
  *     Number of bytes in the decoded binary
  */
-unsigned int decode_base64(unsigned char input[], unsigned char output[]);
-unsigned int decode_base64(unsigned char input[], unsigned int input_length, unsigned char output[]);
+static unsigned int decode_base64(unsigned char input[], unsigned char output[]);
+static unsigned int decode_base64(unsigned char input[], unsigned int input_length, unsigned char output[]);
 
 unsigned char binary_to_base64(unsigned char v) {
   // Capital letters - 'A' is ascii 65 and base64 0
